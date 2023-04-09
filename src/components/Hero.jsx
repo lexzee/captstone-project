@@ -1,10 +1,10 @@
 import React from 'react'
 import hero from '../assets/images/restauranfood.jpg'
-import { Button, Flex, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
+import { Button, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
 
 const Hero = () => {
   return (
-    <Grid className='hero' gridTemplateColumns="repeat(12, 1fr)" bg="#494949" pt={5} pb={5} gridTemplateRows="1fr" gap={10}>
+    <Grid className='hero' gridTemplateColumns="repeat(12, 1fr)" bg="#494949" pt={10} pb={10} gridTemplateRows="1fr" gap={10}>
       {/* <GridItem gridColumnStart="3" colSpan="8" gridTemplateColumns="repeat(8, 1fr)"> */}
         <GridItem colStart={3} colSpan={4} rowSpan={1}>
           <Grid gap={5} gridTemplateRows="ifr 1fr 1fr">
