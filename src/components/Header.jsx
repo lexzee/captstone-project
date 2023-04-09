@@ -1,15 +1,20 @@
 import Navbar from "./Navbar"
 import logo from "../assets/Logo.svg"
-import { Flex, Spacer } from "@chakra-ui/react"
+import { Grid, GridItem, HStack, Spacer } from "@chakra-ui/react"
 
 const Header = () => {
+
   return (
     <header>
-      <Flex as="nav" autoFlow="column" alignItems="center" pt={6} pb={6}>
+      <Grid templateColumns="repeat(12, 1fr)" pt={5} pb={5}>
+      <GridItem gridColumnStart={3} colSpan={8}>
+        <HStack>
         <img src={logo} alt="" />
         <Spacer />
         <Navbar />
-      </Flex>
+        </HStack>
+      </GridItem>
+      </Grid>
     </header>
   )
 }

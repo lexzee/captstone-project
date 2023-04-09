@@ -1,15 +1,15 @@
-import { HStack } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 
 const Navbar = () => {
   return (
-    <HStack spacing={5} fontWeight="bold">
+    <Flex gap={5} fontWeight="bold" flexShrink="2" align="center">
       <a href="./home">Home</a>
       <a href="./about">About</a>
       <a href="./menu">Menu</a>
       <a href="./reservation">Reservation</a>
       <a href="./order_online">Order Online</a>
       <a href="./login">Login</a>
-    </HStack>
+    </Flex>
   )
 }
 
