@@ -1,3 +1,4 @@
+import { Grid, GridItem} from '@chakra-ui/react';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -6,9 +7,14 @@ import Main from './components/Main';
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+    <Grid gridGap={2} autoFlow="row dense" templateColumns="repeat(12, 1fr)">
+      <GridItem gridColumnStart={3} colSpan={8} alignContent="ce
+      ">
+        <Header />
+        <Main />
+        <Footer />
+      </GridItem>
+    </Grid>
     </>
   );
 }
