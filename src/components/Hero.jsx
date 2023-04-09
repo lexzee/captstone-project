@@ -1,23 +1,30 @@
 import React from 'react'
 import hero from '../assets/images/restauranfood.jpg'
-import { Button, Grid, GridItem, Heading } from '@chakra-ui/react'
+import { Button, Flex, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
 
 const Hero = () => {
   return (
-    <Grid className='hero' gridTemplateColumns="repeat(12, 1fr)" bg="#494949"  pr="15rem" pl="15rem">
-      <GridItem gridColumnStart={3} colSpan={8} gridTemplateColumns="repeat(2, 1fr)">
-        <GridItem>
-          <div>
-            <Heading as="h1" color="#F4CE14">Little Lemon</Heading>
-            <p>Chicago</p>
-          </div>
-          <p>Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.</p>
-          <Button colorScheme="orange">Reserve a Table</Button>
+    <Grid className='hero' gridTemplateColumns="repeat(12, 1fr)" bg="#494949" pt={5} pb={5} gridTemplateRows="1fr" gap={10}>
+      {/* <GridItem gridColumnStart="3" colSpan="8" gridTemplateColumns="repeat(8, 1fr)"> */}
+        <GridItem colStart={3} colSpan={4} rowSpan={1}>
+          <Grid gap={5} gridTemplateRows="ifr 1fr 1fr">
+            <GridItem>
+              <Heading as="h1" color="#F4CE14">Little Lemon</Heading>
+              <Text as="p" fontSize="16pt" color="#EDEFEE">Chicago</Text>
+            </GridItem>
+            <GridItem>
+              <Text fontSize="auto" color="#EDEFEE">Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.</Text>
+            </GridItem>
+            <GridItem>
+              <Button colorScheme="orange" p={7}>Reserve a Table</Button>
+            </GridItem>
+          </Grid>
         </GridItem>
-        <GridItem>
-        <img src={hero} style={{width: "22rem", height:"25rem", borderRadius:"16px"}} alt="" />
+        <GridItem colSpan={4} rowSpan={1}>
+        {/* <img src={hero} style={{width: "100%", height:"25rem", borderRadius:"16px"}} alt="" /> */}
+        <img src={hero} style={{ borderRadius:"16px" }} alt="" />
         </GridItem>
-      </GridItem>
+      {/* </GridItem> */}
     </Grid>
   )
 }
