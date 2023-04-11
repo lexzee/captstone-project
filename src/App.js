@@ -4,20 +4,19 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import ReserveTable from './components/ReserveTable';
+import { Route, Routes } from 'react-router-dom';
+import About from './components/About';
 
 function App() {
   return (
     <>
-    {/* <Grid gridGap={2} autoFlow="row dense" templateColumns="repeat(12, 1fr)">
-      <GridItem gridColumnStart={3} colSpan={8}> */}
-    <Grid gridGap={2} autoFlow="row dense" templateColumns="repeat(1, 1fr)">
-      {/* <GridItem>
-        <Header />
-        <Main />
-        <Footer />
-      </GridItem> */}
-      <ReserveTable />
-    </Grid>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/reserve" element={<ReserveTable />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

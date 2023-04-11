@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom"
 import About from "./About"
 import Hero from "./Hero"
 import Highlight from "./Highlight"
@@ -9,7 +10,10 @@ const Main = () => {
         <Hero />
         <Highlight />
         <Testimonials />
-        <About />
+        {/* <Routes>
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/about" element={<About />} />
+        </Routes> */}
     </main>
   )
 }

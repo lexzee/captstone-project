@@ -1,5 +1,6 @@
 import { Flex, Grid, GridItem, HStack, Text } from '@chakra-ui/react';
 import logo from '../assets/Logo.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -12,12 +13,12 @@ const Footer = () => {
           <GridItem>
             <Text fontWeight="extrabold">Doormat Navigation</Text>
             <Flex flexDir="column">
-              <a href="">Home</a>
-              <a href="">About</a>
-              <a href="">Menu</a>
-              <a href="">Reservations</a>
-              <a href="">Order online</a>
-              <a href="">Login</a>
+              <Link to="/">Home </Link>
+              <Link to="/about">About</Link>
+              <Link href="/menu">Menu</Link>
+              <Link to="/reserve">Reservation</Link>
+              <Link href="/order_online">Order Online</Link>
+              <Link href="/login">Login</Link>
             </Flex>
           </GridItem>
           <GridItem>
