@@ -1,5 +1,3 @@
-import { Route, Routes } from "react-router-dom"
-import About from "./About"
 import Hero from "./Hero"
 import Highlight from "./Highlight"
 import Testimonials from "./Testimonials"
